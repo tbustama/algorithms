@@ -7,6 +7,7 @@ var search = function (nums, target) {
     if (nums[mid] === target) return mid;
 
     if (nums[l] <= nums[mid]) {
+      // see if you are in left portion of sorted array
       if (target < nums[l] || target > nums[mid]) {
         l = mid + 1;
       } else {
