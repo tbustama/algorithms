@@ -1,14 +1,13 @@
 var lengthOfLIS = function (nums) {
-  let LIS = new Array(nums.length).fill(1);
-  for (let i = nums.length - 1; i >= 0; i--) {
+  let LTS = new Array(nums.length).fill(1);
+  for (let i = nums.length - 2; i >= 0; i--) {
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[j] > nums[i]) {
-        LIS[i] = Math.max(LIS[i], 1 + LIS[j]);
+      if (nums[i] < nums[j]) {
+        LTS[i] = Math.max(LTS[i], 1 + LTS[j]);
       }
     }
   }
-
-  return Math.max(...LIS);
+  return Math.max(...LTS);
 };
 
-console.log(lengthOfLIS([0, 1, 3, 2, 3]));
+console.log(lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]));
