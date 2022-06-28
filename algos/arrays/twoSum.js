@@ -8,3 +8,4 @@ var twoSum = function (nums, target) {
     }
   }
 };
+// Time complexity O(n) space O(n)
