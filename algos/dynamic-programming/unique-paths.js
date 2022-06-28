@@ -10,3 +10,4 @@ var uniquePaths = function (m, n) {
 
   return row[0];
 };
+// time complexity O(n*m) space complexity O(n)
