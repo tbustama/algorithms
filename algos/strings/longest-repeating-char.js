@@ -19,3 +19,5 @@ var characterReplacement = function (s, k) {
   }
   return res;
 };
+
+// O(n) time complexity
