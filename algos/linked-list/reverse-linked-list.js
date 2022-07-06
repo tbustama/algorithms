@@ -14,3 +14,4 @@ var reverseList = function (head) {
   cur.next = tempNext;
   return cur;
 };
+// hi
