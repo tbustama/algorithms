@@ -15,3 +15,4 @@ var reverseList = function (head) {
   return cur;
 };
 // hi
+// O(n) space O(1) time
