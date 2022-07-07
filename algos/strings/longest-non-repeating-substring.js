@@ -12,3 +12,4 @@ var lengthOfLongestSubstring = function (s) {
   }
   return res;
 };
+// O(n) time O(n) space
