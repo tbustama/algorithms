@@ -14,5 +14,4 @@ var reverseList = function (head) {
   cur.next = tempNext;
   return cur;
 };
-// hi
 // O(n) space O(1) time
