@@ -1,24 +1,14 @@
 var merge = function (intervals) {
-  if (intervals.length === 1) {
-    return intervals;
-  }
-  let res = [];
-  let i = 0;
-  let j = 1;
   intervals.sort((a, b) => a[0] - b[0]);
-  while (j < intervals.length) {
-    let cur = intervals[i];
-    while (j < intervals.length && cur[1] >= intervals[j][0]) {
-      cur[1] = Math.max(cur[1], intervals[j][1]);
-      j++;
-    }
-    res.push(cur);
-    if (j === intervals.length - 1) {
-      res.push(intervals[j]);
-    }
-    i = j;
-    j++;
-  }
+  let res = intervals[0];
 
+  for (let i = 1; i < intervals.length; i++) {
+    let cur = res[res.length - 1];
+    if (cur[1] >= intervals[i][0]) {
+      cur[1] = Math.max(cur[1], intervals[i][1]);
+    } else {
+      res.push(intervals[i]);
+    }
+  }
   return res;
 };
