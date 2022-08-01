@@ -21,7 +21,6 @@ var numIslands = function (grid) {
     dfs(r + 1, c);
     dfs(r, c - 1);
     dfs(r, c + 1);
-    return 1;
   };
 
   //   iterate through all cells, run dfs if it is a 1 and hasn't been seen
@@ -30,7 +29,7 @@ var numIslands = function (grid) {
       if (seen[r][c] || grid[r][c] === "0") {
         continue;
       }
-      count += dfs(r, c);
+      count += 1;
     }
   }
   return count;
